@@ -80,7 +80,11 @@
 <ng-template #longCardsTMPL>
   <div id="list-horizontal" class="list-group list-group-horizontal">
     <div *ngFor="let item of instructors; let i = index">
-      <div class="long-card" [style]="item.mainStyle">
+      <div
+        class="long-card pointer"
+        [style]="item.mainStyle"
+        (click)="onGetDetail({ _id: item._id })"
+      >
         <div class="top-layout text-center">
           <img [src]="item.image" [alt]="item.name" />
           <h4>
@@ -153,7 +157,11 @@
 <ng-template #shortCardsTMPL>
   <div id="list-horizontal" class="list-group list-group-horizontal">
     <div *ngFor="let item of instructors; let i = index">
-      <div class="sort-card" [style]="item.mainStyle">
+      <div
+        class="sort-card pointer"
+        [style]="item.mainStyle"
+        (click)="onGetDetail({ _id: item._id })"
+      >
         <div class="top-layout text-center">
           <img [src]="item.image" [alt]="item.name" />
           <h4>

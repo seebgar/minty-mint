@@ -1,1 +1,210 @@
-<p>detail works!</p>
+<div id="main-tmpl">
+  <ng-container *ngTemplateOutlet="headerTMPL"></ng-container>
+  <ng-container *ngTemplateOutlet="bodyTMPL"></ng-container>
+</div>
+
+<!-- ? Header -->
+<ng-template #headerTMPL>
+  <div id="header" class="row">
+    <div class="col-12 col-md-3">
+      <nb-icon
+        id="back-icon"
+        icon="arrow-back-outline"
+        class="pointer mt-3"
+        (click)="onBackNav()"
+      ></nb-icon>
+    </div>
+    <div class="col-12 col-md-6 text-center">
+      <h1>
+        {{ subject.title || instructor.name || "-" }}
+      </h1>
+    </div>
+    <div class="col-12 col-md-3">&nbsp;</div>
+  </div>
+</ng-template>
+
+<!-- ? Body -->
+<ng-template #bodyTMPL>
+  <div id="body">
+    <div class="row">
+      <div class="col-3 h-100">
+        <!-- Long Card -->
+        <ng-container *ngTemplateOutlet="longCardTMPL"></ng-container>
+      </div>
+      <div class="col-5 h-100">
+        <!-- Description -->
+        <ng-container *ngTemplateOutlet="descriptionTMPL"></ng-container>
+      </div>
+      <div class="col-4 h-100">
+        <!-- Student -->
+        <ng-container *ngTemplateOutlet="studentTMPL"></ng-container>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- ? Long Card -->
+<ng-template #longCardTMPL>
+  <div class="long-card" [style]="instructor.mainStyle">
+    <div class="top-layout text-center">
+      <img [src]="instructor.image" [alt]="instructor.name" />
+      <h4>
+        {{ instructor.name | titlecase }}
+      </h4>
+      <p>
+        {{ instructor.subject | titlecase }}
+      </p>
+      <div class="d-flex justify-content-center pim-0 badges">
+        <div class="p-2">
+          <div class="card-badge h-100">
+            <p>{{ instructor?.time }} ago</p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="card-badge h-100">
+            <p>{{ instructor?.trait | titlecase }}</p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="card-badge h-100">
+            <p>{{ instructor?.attribute }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-layout text-center" [style]="instructor.secondaryStyle">
+      <div class="bt-content">
+        <h6>STUDENTS</h6>
+        <ng-container
+          *ngFor="
+            let student of instructor.students | slice: 0:5;
+            let a = index
+          "
+        >
+          <span id="student-{{ a }}-{{ i }}">
+            <img class="student-card" [src]="instructor.image" alt="Students" />
+          </span>
+        </ng-container>
+        <ng-container *ngIf="instructor?.students?.length > 5">
+          <span>
+            <div class="student-card text-center">
+              <p>+{{ instructor.students.length - 5 }}</p>
+            </div>
+          </span>
+        </ng-container>
+
+        <br />
+        <h6 class="mt-3">RECENT PROJECTS</h6>
+        <ng-container
+          *ngFor="
+            let student of instructor.projects | slice: 0:3;
+            let a = index
+          "
+        >
+          <span id="student-{{ a }}-{{ i }}">
+            <img class="project-card" [src]="instructor.image" alt="Projects" />
+          </span>
+        </ng-container>
+        <ng-container *ngIf="instructor?.students?.length > 5">
+          <span>
+            <div class="project-card text-center">
+              <p>+{{ instructor.projects.length - 3 }}</p>
+            </div>
+          </span>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- ? Description -->
+<ng-template #descriptionTMPL>
+  <div class="long-description-card">
+    <div class="top-layout">
+      <div
+        class="d-flex align-items-center flex-column h-100 pim-0 descp-content"
+      >
+        <div class="p-2 pim-0">
+          <h2>Description of the instructor and their background.</h2>
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="p-2 pim-0">
+          <p>
+            {{ subject.description }}
+          </p>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="p-2 pim-0 w-100">
+          <div class="d-flex justify-content-between w-100">
+            <div class="p-2">
+              <p>
+                <strong>LOREM IPSUM DOLOR AMET CONSECTETEUR</strong>
+              </p>
+            </div>
+            <div class="p-2">
+              <nb-icon icon="globe-2-outline"></nb-icon> webpage
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-layout text-center" [style]="instructor.mainStyle">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="p-2">
+          <nb-icon
+            class="image-icon align-middle"
+            icon="image-outline"
+          ></nb-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- ? Student -->
+<ng-template #studentTMPL>
+  <div class="long-student-card">
+    <div class="top-layout" [style]="instructor.mainStyle">
+      <div
+        class="d-flex justify-content-center align-items-center h-100 student-img-content"
+      >
+        <div class="p-2">
+          <nb-icon
+            class="image-icon align-middle"
+            icon="image-outline"
+          ></nb-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-layout" [style]="instructor.secondaryStyle">
+      <!--  -->
+      <div class="row">
+        <div class="col-2">
+          <img [src]="instructor.image" alt="Student" />
+        </div>
+        <div class="col-9">
+          <div class="student-txt">
+            <h6>Name Surname</h6>
+            <p class="student-review text-light">
+              Student Review Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Inventore modi non aut. Provident labore qui commodi
+              temporibus ipsam, quisquam omnis eveniet odit ea ex exercitationem
+              illo, laboriosam ratione neque quos?
+            </p>
+          </div>
+        </div>
+        <div class="col-1">
+          <nb-icon icon="more-vertical-outline"></nb-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

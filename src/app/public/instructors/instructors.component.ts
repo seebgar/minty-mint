@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { GeneralService } from "../services/general.service";
 import { MainService } from "../services/main.service";
 
 @Component({
@@ -20,7 +21,10 @@ export class InstructorsComponent implements OnInit {
   public isLoadingFilters: boolean = false;
   public isLoadingInstructors: boolean = false;
 
-  constructor(private mainService: MainService) {}
+  constructor(
+    private mainService: MainService,
+    private generalService: GeneralService
+  ) {}
 
   ngOnInit(): void {
     this.getInstructors();
@@ -28,7 +32,7 @@ export class InstructorsComponent implements OnInit {
   }
 
   // ========================
-  // Methods
+  // Functions
   // ========================
 
   /**
@@ -36,6 +40,17 @@ export class InstructorsComponent implements OnInit {
    */
   public onChangeLayout(): void {
     this.longCards = !this.longCards;
+  }
+
+  /**
+   * Navigation to detail screen
+   * @param {string} _id
+   */
+  public onGetDetail({ _id }: { _id: string }): void {
+    this.generalService.routerNavQueryTo({
+      path: "/index/home/detail",
+      query: { instructor: "0" },
+    });
   }
 
   /**

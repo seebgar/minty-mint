@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { GeneralService } from "../services/general.service";
 import { MainService } from "../services/main.service";
 
 @Component({
@@ -17,7 +18,10 @@ export class SubjectsComponent implements OnInit {
   public isLoadingFilters: boolean = false;
   public isLoadingSubjects: boolean = false;
 
-  constructor(private mainService: MainService) {}
+  constructor(
+    private mainService: MainService,
+    private generalService: GeneralService
+  ) {}
 
   ngOnInit(): void {
     this.getSubjects();
@@ -25,8 +29,19 @@ export class SubjectsComponent implements OnInit {
   }
 
   // ========================
-  // Methods
+  // Functions
   // ========================
+
+  /**
+   * Navigation to detail screen
+   * @param {string} _id
+   */
+  public onGetDetail({ _id }: { _id: string }): void {
+    this.generalService.routerNavQueryTo({
+      path: "/index/home/detail",
+      query: { subject: "0" },
+    });
+  }
 
   /**
    * Initial filter items
