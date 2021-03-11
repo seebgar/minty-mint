@@ -1,9 +1,10 @@
 [
   {
     "name": "Mariam Schumm",
-    "image": "",
-    "experience": "7 years",
+    "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "time": "7 years",
     "trait": "Energetic",
+    "subject": "Mathematics",
     "attribute": "Lots of homework",
     "students": [
       {
@@ -65,6 +66,292 @@
       {
         "image": ""
       }
-    ]
+    ],
+    "mainStyle": "background-color: rgb(205, 214, 232);",
+    "secondaryStyle": "background-color: rgb(69, 101, 168);"
+  },
+  {
+    "name": "Mariam Schumm",
+    "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "time": "7 years",
+    "trait": "Energetic",
+    "subject": "Mathematics",
+    "attribute": "Lots of homework",
+    "students": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "projects": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "mainStyle": "background-color: rgb(234, 226, 207);",
+    "secondaryStyle": "background-color: rgb(175, 143, 81);"
+  },
+  {
+    "name": "Mariam Schumm",
+    "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "time": "7 years",
+    "trait": "Energetic",
+    "subject": "Mathematics",
+    "attribute": "Lots of homework",
+    "students": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "projects": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "mainStyle": "background-color: rgb(248, 204, 222);",
+    "secondaryStyle": "background-color: rgb(228, 66, 229);"
+  },
+  {
+    "name": "Mariam Schumm",
+    "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "time": "7 years",
+    "trait": "Energetic",
+    "subject": "Mathematics",
+    "attribute": "Lots of homework",
+    "students": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "projects": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "mainStyle": "background-color: rgb(226, 206, 232);",
+    "secondaryStyle": "background-color: rgb(144, 74, 168);"
+  },
+  {
+    "name": "Mariam Schumm",
+    "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "time": "7 years",
+    "trait": "Energetic",
+    "subject": "Mathematics",
+    "attribute": "Lots of homework",
+    "students": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "projects": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "mainStyle": "background-color: rgb(201, 225, 229);",
+    "secondaryStyle": "background-color: rgb(53, 142, 156);"
   }
 ]

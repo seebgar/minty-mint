@@ -31,8 +31,6 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private generalService: GeneralService) {
     const url: string = this.router.url;
 
-    console.log(url, `${url}`.toLowerCase().endsWith("/subjects"));
-
     if (`${url}`.toLowerCase().endsWith("/instructors")) {
       this.setActiveItem({ name: "Instructors", navigate: false });
     } else if (`${url}`.toLowerCase().endsWith("/subjects")) {
@@ -55,7 +53,6 @@ export class HeaderComponent implements OnInit {
    * @returns
    */
   public setActiveItem({ name, navigate = true }) {
-    console.log(name);
     this.mainTabs.forEach((item) => {
       if (item.name === name) {
         item.isActive = true;

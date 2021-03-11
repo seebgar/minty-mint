@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Subject",
+    "items": [
+      {
+        "title": "Mathematics"
+      },
+      {
+        "title": "Biology"
+      },
+      {
+        "title": "Art Theory"
+      },
+      {
+        "title": "Computer Science"
+      }
+    ]
+  },
+  {
+    "title": "Status",
+    "items": [
+      {
+        "title": "Available seats"
+      },
+      {
+        "title": "Fully booked"
+      },
+      {
+        "title": "No exams"
+      },
+      {
+        "title": "No homework"
+      }
+    ]
+  },
+  {
+    "title": "Experience",
+    "items": [
+      {
+        "title": "0 - 5 years"
+      },
+      {
+        "title": "5 - 10 years"
+      },
+      {
+        "title": "10 - 15 years"
+      },
+      {
+        "title": "+15 years"
+      }
+    ]
+  },
+  {
+    "title": "Location",
+    "items": [
+      {
+        "title": "Kiel, SH"
+      },
+      {
+        "title": "Stuttgart, BW"
+      },
+      {
+        "title": "Munich, BY"
+      },
+      {
+        "title": "Landshut, BY"
+      }
+    ]
+  }
+]
