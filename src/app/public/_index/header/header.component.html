@@ -1,0 +1,25 @@
+<div class="header-container">
+  <div class="logo-container">
+    <h1>MINTY MINT</h1>
+  </div>
+</div>
+
+<div class="header-container">
+  <nb-actions size="small">
+    <nb-action *ngFor="let item of mainTabs">
+      <span
+        [ngClass]="{ 'active-action': item.isActive }"
+        (click)="setActiveItem({ name: item.name })"
+        >{{ item.name }}
+      </span>
+    </nb-action>
+  </nb-actions>
+</div>
+
+<div id="icons-actions" class="header-container">
+  <nb-actions size="tiny">
+    <nb-action class="icon-action" icon="search-outline"></nb-action>
+    <nb-action class="icon-action" icon="bell-outline"></nb-action>
+    <nb-action class="icon-action" icon="person-outline"></nb-action>
+  </nb-actions>
+</div>

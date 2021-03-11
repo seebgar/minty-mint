@@ -1,0 +1,35 @@
+@import "../../../@theme/styles/themes";
+@import "~@nebular/theme/styles/global/breakpoints";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+@include nb-install-component() {
+  width: 70%;
+
+  h1 {
+    font-size: normal;
+    font-variant: normal;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 27px;
+    font-family: "Roboto", sans-serif;
+    color: nb-theme(color-primary-500);
+  }
+
+  p {
+    margin-bottom: 0 !important;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: rgb(129, 129, 129);
+    cursor: pointer;
+  }
+
+  #trade-mark {
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 90%;
+  }
+}
