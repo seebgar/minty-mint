@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Focus",
+    "items": [
+      {
+        "title": "Mathematics"
+      },
+      {
+        "title": "Biology"
+      },
+      {
+        "title": "Art Theory"
+      },
+      {
+        "title": "Computer Science"
+      }
+    ]
+  },
+  {
+    "title": "Status",
+    "items": [
+      {
+        "title": "Available seats"
+      },
+      {
+        "title": "Fully booked"
+      },
+      {
+        "title": "No exams"
+      },
+      {
+        "title": "No homework"
+      }
+    ]
+  },
+  {
+    "title": "Location",
+    "items": [
+      {
+        "title": "Kiel, SH"
+      },
+      {
+        "title": "Stuttgart, BW"
+      },
+      {
+        "title": "Munich, BY"
+      },
+      {
+        "title": "Landshut, BY"
+      }
+    ]
+  }
+]

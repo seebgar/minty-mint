@@ -23,6 +23,7 @@ import {
   NbSpinnerModule,
   NbCalendarRangeModule,
   NbActionsModule,
+  NbFormFieldModule,
 } from "@nebular/theme";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
 
@@ -78,6 +79,7 @@ import { DetailComponent } from "./detail/detail.component";
     NbSelectModule,
     NbIconModule,
     NbEvaIconsModule,
+    NbFormFieldModule,
   ],
   providers: [],
 })

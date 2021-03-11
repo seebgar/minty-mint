@@ -12,15 +12,13 @@ export class MainService {
   /**
    * API GET
    * Retorna un objeto JSON dependiendo del API especificado
-   * @param {string} api route: instructors | subjects
-   * @return {Observable<any>} respuesta asincrónica
+   * @param {string} api route: instructors | subjects | subject-filters
+   * @return {Promise<any>} respuesta asincrónica
    */
-  public get({ api }: { api: String }): Observable<any> {
-    const path: string = api.toLowerCase().includes("instructors")
-      ? "assets/data/instructors.json"
-      : "assets/data/subjects.json";
-
-    const request: Observable<any> = this.httpClient.get(path);
+  public get({ api }: { api: String }): Promise<any> {
+    const request: Promise<any> = this.httpClient
+      .get(`assets/data/${api}.json`)
+      .toPromise();
     return request;
   }
 }

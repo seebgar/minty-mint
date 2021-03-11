@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   public mainTabs: any[] = [
     {
       name: "Instructors",
-      isActive: true,
+      isActive: false,
     },
     {
       name: "Subjects",
@@ -31,13 +31,15 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private generalService: GeneralService) {
     const url: string = this.router.url;
 
-    if (!`${url}`.toLowerCase().includes("/instructors")) {
+    console.log(url, `${url}`.toLowerCase().endsWith("/subjects"));
+
+    if (`${url}`.toLowerCase().endsWith("/instructors")) {
       this.setActiveItem({ name: "Instructors", navigate: false });
-    } else if (`${url}`.toLowerCase().includes("/subjects")) {
+    } else if (`${url}`.toLowerCase().endsWith("/subjects")) {
       this.setActiveItem({ name: "Subjects", navigate: false });
-    } else if (`${url}`.toLowerCase().includes("/calendar")) {
+    } else if (`${url}`.toLowerCase().endsWith("/calendar")) {
       this.setActiveItem({ name: "Calendar", navigate: false });
-    } else if (`${url}`.toLowerCase().includes("/students")) {
+    } else if (`${url}`.toLowerCase().endsWith("/students")) {
       this.setActiveItem({ name: "Students", navigate: false });
     }
   }
@@ -53,6 +55,7 @@ export class HeaderComponent implements OnInit {
    * @returns
    */
   public setActiveItem({ name, navigate = true }) {
+    console.log(name);
     this.mainTabs.forEach((item) => {
       if (item.name === name) {
         item.isActive = true;
