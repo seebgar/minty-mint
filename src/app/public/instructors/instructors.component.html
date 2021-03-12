@@ -39,7 +39,7 @@
       {{ item.title | titlecase }}
     </h4>
     <ng-container *ngFor="let filter of item.items | slice: 0:3; let y = index">
-      <nb-checkbox class="check-box">
+      <nb-checkbox class="check-box" [value]="filter.check">
         <p>
           {{ filter.title | titlecase }}
         </p>
