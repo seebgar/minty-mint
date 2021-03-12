@@ -49,7 +49,7 @@ export class InstructorsComponent implements OnInit {
   public onGetDetail({ _id }: { _id: string }): void {
     this.generalService.routerNavQueryTo({
       path: "/index/home/detail",
-      query: { instructor: "0" },
+      query: { instructor: _id || "0" },
     });
   }
 

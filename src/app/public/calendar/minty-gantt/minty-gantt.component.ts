@@ -43,8 +43,13 @@ export class MintyGanttComponent implements OnInit {
       {
         TaskID: 1,
         TaskName: "Mathematics",
-        StartDate: "06/14/2019",
-        Duration: 3, // Days
+        // StartDate: "06/14/2019",
+        // Duration: 3, // Days
+        Segments: [
+          { StartDate: new Date("06/18/2019"), Duration: 2 },
+          { StartDate: new Date("06/23/2019"), Duration: 5 },
+          { StartDate: new Date("06/30/2019"), Duration: 3 },
+        ],
       },
       {
         TaskID: 2,
@@ -141,14 +146,15 @@ export class MintyGanttComponent implements OnInit {
         leftLabel: "TaskName",
         rightLabel: "TaskName",
       },
+      segments: "Segments",
     };
 
     Gantt.Inject(Toolbar, Selection, Edit, Filter);
 
     this.gantt = new Gantt({
       dataSource: this.data,
-      width: "1000px",
-      height: "900px",
+      width: "1250px",
+      height: "700px",
       taskFields: this.taskfield,
       projectStartDate: new Date("6/13/2019"),
       projectEndDate: new Date("7/13/2019"),

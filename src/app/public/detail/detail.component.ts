@@ -51,7 +51,9 @@ export class DetailComponent implements OnInit {
    */
   private getSubject({ _id }: { _id: string }): void {
     this.mainService.get({ api: "subjects" }).then((response) => {
-      this.subject = response[0];
+      this.subject =
+        !_id || _id !== "0" ? response[parseInt(_id) - 1] : response[0];
+      if (!this.subject) this.subject = response[0];
       if (this.isInstructor) this.subject.title = "";
     });
   }
@@ -62,7 +64,9 @@ export class DetailComponent implements OnInit {
    */
   private getInstructor({ _id }: { _id: string }): void {
     this.mainService.get({ api: "instructors" }).then((response) => {
-      this.instructor = response[0];
+      this.instructor =
+        !_id || _id !== "0" ? response[parseInt(_id) - 1] : response[0];
+      if (!this.instructor) this.instructor = response[0];
     });
   }
 }
