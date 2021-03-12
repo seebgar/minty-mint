@@ -5,6 +5,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
 
+/** Gannt */
+import { GanttModule } from "@syncfusion/ej2-angular-gantt";
+
 /** Theming */
 import {
   NbLayoutModule,
@@ -23,6 +26,7 @@ import {
   NbSpinnerModule,
   NbCalendarRangeModule,
   NbActionsModule,
+  NbRadioModule,
   NbFormFieldModule,
 } from "@nebular/theme";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
@@ -37,6 +41,7 @@ import { SubjectsComponent } from "./subjects/subjects.component";
 import { CalendarComponent } from "./calendar/calendar.component";
 import { StudentsComponent } from "./students/students.component";
 import { DetailComponent } from "./detail/detail.component";
+import { MintyGanttComponent } from "./calendar/minty-gantt/minty-gantt.component";
 
 @NgModule({
   declarations: [
@@ -48,6 +53,7 @@ import { DetailComponent } from "./detail/detail.component";
     CalendarComponent,
     StudentsComponent,
     DetailComponent,
+    MintyGanttComponent,
   ],
   imports: [
     HttpClientModule,
@@ -80,6 +86,9 @@ import { DetailComponent } from "./detail/detail.component";
     NbIconModule,
     NbEvaIconsModule,
     NbFormFieldModule,
+    NbRadioModule,
+
+    GanttModule,
   ],
   providers: [],
 })

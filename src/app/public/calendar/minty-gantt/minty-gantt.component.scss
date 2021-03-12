@@ -1,0 +1,25 @@
+@import "../../../@theme/styles/themes.scss";
+@import "~@nebular/theme/styles/global/breakpoints";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+@import "~@syncfusion/ej2-base/styles/material.css";
+@import "~@syncfusion/ej2-buttons/styles/material.css";
+@import "~@syncfusion/ej2-calendars/styles/material.css";
+@import "~@syncfusion/ej2-dropdowns/styles/material.css";
+@import "~@syncfusion/ej2-inputs/styles/material.css";
+@import "~@syncfusion/ej2-lists/styles/material.css";
+@import "~@syncfusion/ej2-layouts/styles/material.css";
+@import "~@syncfusion/ej2-navigations/styles/material.css";
+@import "~@syncfusion/ej2-popups/styles/material.css";
+@import "~@syncfusion/ej2-richtexteditor/styles/material.css";
+@import "~@syncfusion/ej2-grids/styles/material.css";
+@import "~@syncfusion/ej2-treegrid/styles/material.css";
+@import "~@syncfusion/ej2-gantt/styles/material.css";
+
+::nb-deep .e-gantt-child-taskbar-inner-div {
+  background-color: nb-theme(color-primary-500) !important;
+  border-radius: 2rem !important;
+}
+
+@include nb-install-component() {
+}

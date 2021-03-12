@@ -1,0 +1,150 @@
+@import "../../@theme/styles/themes.scss";
+@import "~@nebular/theme/styles/global/breakpoints";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+@include nb-install-component() {
+  /// ? Filters Column
+  #filters-column {
+    .fixed {
+      position: fixed;
+      width: 14%;
+    }
+
+    // ? New Subject Title
+    h3 {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      font-family: "Roboto", sans-serif;
+      color: nb-theme(color-primary-500);
+    }
+
+    // ? Search Bar
+    #search-field {
+      input {
+        font-size: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      input::placeholder {
+        color: rgb(129, 129, 129);
+      }
+    }
+
+    h4 {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: medium;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    p {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 0 !important;
+    }
+
+    .see-more {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 12px;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 0 !important;
+      color: nb-theme(color-primary-500);
+    }
+
+    .check-box {
+      display: block;
+    }
+  }
+
+  /// ? Subjects Column
+  #subjects-column {
+    .subject-image-colum {
+      background-color: rgb(74, 74, 74);
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+
+      .image-icon {
+        color: white;
+        font-size: 46px;
+      }
+    }
+
+    h1 {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: medium;
+      font-size: 32px;
+      line-height: 27px;
+      font-family: "Roboto", sans-serif;
+      color: nb-theme(color-primary-700);
+    }
+
+    .subject-card {
+      background-color: rgb(183, 183, 183);
+      border-radius: 1rem;
+
+      .subject-content-colum {
+        padding: 1.75rem 1rem;
+      }
+
+      h4.subject-card-title {
+        font-size: 18px;
+        color: black;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .social-icons {
+        margin-left: -0.5rem;
+      }
+
+      .card-badge {
+        background-color: #fff;
+        min-width: 60px;
+        padding: 0.25rem 0.5rem;
+        border-radius: 7px;
+
+        p {
+          font-size: 10px;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+
+  .calendar-filters {
+    color: nb-theme(color-primary-500);
+    font-family: "Roboto" sans-serif;
+    font-size: 18px;
+    margin-top: -2rem;
+
+    nb-icon {
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+
+    nb-radio {
+      p {
+        color: nb-theme(color-primary-500);
+        font-family: "Roboto" sans-serif;
+        font-size: 18px;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

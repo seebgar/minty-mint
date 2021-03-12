@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Focus",
+    "items": [
+      {
+        "title": "Mathematics"
+      },
+      {
+        "title": "Biology"
+      },
+      {
+        "title": "Art Theory"
+      },
+      {
+        "title": "Computer Science"
+      }
+    ]
+  },
+  {
+    "title": "Time",
+    "items": [
+      {
+        "title": "Morning"
+      },
+      {
+        "title": "Afternoon"
+      },
+      {
+        "title": "Evening"
+      },
+      {
+        "title": "Weekends"
+      }
+    ]
+  },
+  {
+    "title": "Location",
+    "items": [
+      {
+        "title": "Kiel, SH"
+      },
+      {
+        "title": "Stuttgart, BW"
+      },
+      {
+        "title": "Munich, BY"
+      },
+      {
+        "title": "Landshut, BY"
+      }
+    ]
+  }
+]
