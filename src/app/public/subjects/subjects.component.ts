@@ -39,7 +39,7 @@ export class SubjectsComponent implements OnInit {
   public onGetDetail({ _id }: { _id: string }): void {
     this.generalService.routerNavQueryTo({
       path: "/index/home/detail",
-      query: { subject: "0" },
+      query: { subject: _id || "0" },
     });
   }
 

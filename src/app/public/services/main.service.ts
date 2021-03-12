@@ -1,6 +1,5 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
 import "rxjs/add/operator/map";
 
 @Injectable({
@@ -11,7 +10,6 @@ export class MainService {
 
   /**
    * API GET
-   * Retorna un objeto JSON dependiendo del API especificado
    * @param {string} api route: instructors | subjects | subject-filters
    * @return {Promise<any>} respuesta asincrónica
    */
