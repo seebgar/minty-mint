@@ -10,8 +10,8 @@
       <ng-container *ngTemplateOutlet="filtersTMPL"></ng-container>
     </div>
   </div>
-  <div id="instructors-column" class="col ml-3 w-100 h-100">
-    <!-- ? Instructors -->
+  <div id="instructors-column">
+    <!-- ? Students -->
     <ng-container *ngTemplateOutlet="instructorsTMPL"></ng-container>
   </div>
 </div>
@@ -67,7 +67,47 @@
 
 <!-- ? Short Cards -->
 <ng-template #shortCardsTMPL>
-  <div id="list-horizontal" class="list-group list-group-horizontal">
+  <div class="row">
+    <div
+      *ngFor="let item of instructors; let i = index"
+      class="col-12 col-md-4"
+    >
+      <div
+        class="sort-card pointer"
+        [style]="item.mainStyle"
+        (click)="onGetDetail({ _id: item.id })"
+      >
+        <div class="top-layout text-center">
+          <img [src]="item.image" [alt]="item.name" />
+          <h4>
+            {{ item.name | titlecase }}
+          </h4>
+          <p>
+            {{ item.subject | titlecase }}
+          </p>
+          <div class="d-flex justify-content-center pim-0 badges">
+            <div class="p-2">
+              <div class="card-badge h-100">
+                <p>{{ item?.time }} ago</p>
+              </div>
+            </div>
+            <div class="p-2">
+              <div class="card-badge h-100">
+                <p>{{ item?.trait | titlecase }}</p>
+              </div>
+            </div>
+            <div class="p-2">
+              <div class="card-badge h-100">
+                <p>{{ item?.attribute }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="list-horizontal" class="list-group list-group-horizontal">
     <div *ngFor="let item of instructors | slice: 0:4; let i = index">
       <div
         class="sort-card pointer"
@@ -141,5 +181,5 @@
     <div class="list-spacer">
       <div class="long-card"></div>
     </div>
-  </div>
+  </div> -->
 </ng-template>
