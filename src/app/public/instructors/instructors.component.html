@@ -5,7 +5,7 @@
       [nbSpinner]="isLoadingFilters"
       nbSpinnerSize="giant"
       nbSpinnerStatus="primary"
-      class="fixed"
+      class="fixed-filter"
     >
       <ng-container *ngTemplateOutlet="filtersTMPL"></ng-container>
     </div>
@@ -39,7 +39,7 @@
       {{ item.title | titlecase }}
     </h4>
     <ng-container *ngFor="let filter of item.items | slice: 0:3; let y = index">
-      <nb-checkbox class="check-box" [value]="filter.check">
+      <nb-checkbox class="check-box" [checked]="filter.check">
         <p>
           {{ filter.title | titlecase }}
         </p>

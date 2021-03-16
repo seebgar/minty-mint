@@ -5,7 +5,7 @@
       [nbSpinner]="isLoadingFilters"
       nbSpinnerSize="giant"
       nbSpinnerStatus="primary"
-      class="fixed"
+      class="fixed-filter"
     >
       <ng-container *ngTemplateOutlet="filtersTMPL"></ng-container>
     </div>
@@ -106,80 +106,4 @@
       </div>
     </div>
   </div>
-
-  <!-- <div id="list-horizontal" class="list-group list-group-horizontal">
-    <div *ngFor="let item of instructors | slice: 0:4; let i = index">
-      <div
-        class="sort-card pointer"
-        [style]="item.mainStyle"
-        (click)="onGetDetail({ _id: item.id })"
-      >
-        <div class="top-layout text-center">
-          <img [src]="item.image" [alt]="item.name" />
-          <h4>
-            {{ item.name | titlecase }}
-          </h4>
-          <p>
-            {{ item.subject | titlecase }}
-          </p>
-          <div class="d-flex justify-content-center pim-0 badges">
-            <div class="p-2">
-              <div class="card-badge h-100">
-                <p>{{ item?.time }} ago</p>
-              </div>
-            </div>
-            <div class="p-2">
-              <div class="card-badge h-100">
-                <p>{{ item?.trait | titlecase }}</p>
-              </div>
-            </div>
-            <div class="p-2">
-              <div class="card-badge h-100">
-                <p>{{ item?.attribute }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          *ngIf="i < instructors.length - 4"
-          class="bottom-layout text-center pointer"
-          (click)="onGetDetail({ _id: instructors[i + 4].id })"
-          [style]="instructors[i + 4].mainStyle"
-        >
-          <img
-            [src]="instructors[i + 4].image"
-            [alt]="instructors[i + 4].name"
-          />
-          <h4>
-            {{ instructors[i + 4].name | titlecase }}
-          </h4>
-          <p>
-            {{ instructors[i + 4].subject | titlecase }}
-          </p>
-          <div class="d-flex justify-content-center pim-0 badges">
-            <div class="p-2">
-              <div class="card-badge h-100">
-                <p>{{ instructors[i + 4].time }} ago</p>
-              </div>
-            </div>
-            <div class="p-2">
-              <div class="card-badge h-100">
-                <p>{{ instructors[i + 4].trait | titlecase }}</p>
-              </div>
-            </div>
-            <div class="p-2">
-              <div class="card-badge h-100">
-                <p>{{ instructors[i + 4].attribute }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="list-spacer">
-      <div class="long-card"></div>
-    </div>
-  </div> -->
 </ng-template>

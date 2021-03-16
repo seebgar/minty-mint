@@ -5,22 +5,11 @@ import {
   SkipSelf,
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { of as observableOf } from "rxjs";
 
 import { throwIfAlreadyLoaded } from "./module-import-guard";
-import {
-  AnalyticsService,
-  LayoutService,
-  SeoService,
-  StateService,
-} from "./utils";
+import { LayoutService } from "./utils";
 
-export const NB_CORE_PROVIDERS = [
-  AnalyticsService,
-  LayoutService,
-  SeoService,
-  StateService,
-];
+export const NB_CORE_PROVIDERS = [LayoutService];
 
 @NgModule({
   imports: [CommonModule],

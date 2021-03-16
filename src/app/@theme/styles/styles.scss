@@ -23,9 +23,9 @@
   // framework global styles
   @include nb-theme-global();
   @include ngx-layout();
+  @include nb-overrides();
   // loading progress bar
   @include ngx-pace-theme();
-  @include nb-overrides();
 
   html,
   body {
@@ -42,6 +42,74 @@
 
   .pim-0 {
     padding: 0 !important;
+  }
+
+  // ? Component Title
+  h3 {
+    font-size: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: "Roboto", sans-serif;
+    color: nb-theme(color-primary-500);
+  }
+
+  // ? Filters column
+  .fixed-filter {
+    position: fixed;
+    width: 14%;
+    z-index: 100;
+  }
+
+  /// ? Filters Column
+  #filters-column {
+    // ? Search Bar
+    #search-field {
+      input {
+        font-size: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      input::placeholder {
+        color: rgb(129, 129, 129);
+      }
+    }
+
+    h4 {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: medium;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    p {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 0 !important;
+    }
+
+    .see-more {
+      font-size: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 12px;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 0 !important;
+      color: nb-theme(color-primary-500);
+    }
+
+    .check-box {
+      display: block;
+    }
   }
 }
 
